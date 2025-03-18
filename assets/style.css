@@ -10,7 +10,7 @@
 }
 
 .side-bar{
-    width: 15%;
+    width: 20%;
     height: 100%;
     background: #F7F1F1;
     padding: 1.2rem ;
@@ -52,4 +52,188 @@ nav li a i {
 
 .nav li.active a {
     color: #CF5A5C;
+}
+
+.map-block {
+    width: 670px;
+    height: 770px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+   
+    padding: 0;
+    position: relative;  
+}
+
+#map-container {
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 100%;
+ 
+}
+
+.diagram-block{
+    width: 660px;
+    height: 366px;
+    box-shadow: 0 12px 10px rgba(0,0,0,0.1);
+    padding: 1.5rem 4rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+    gap: 0.5rem;  
+}
+
+.blo{
+    margin-bottom: 35px;
+}
+
+.diagram-p{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.diagram-span{
+    font-size: 10px;
+    color:rgb(114, 114, 106);
+    margin-left: 35px;
+}
+
+
+.diagram-block2{
+    width: 660px;
+    height: 366px;
+    margin-top:35px ;
+    box-shadow: 0 12px 10px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+    margin-right: 1.5rem;
+    gap: 0.5rem;  
+}
+
+.diagram-P{
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.diagram-Sp{
+    font-size: 25;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.diagram-dp{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.Box-stat{
+    padding-left: 160px;
+    height: 45px;
+    width: 530px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 70px;
+}
+
+.Box-number{
+    color: #CA0000;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #C7C7C7;
+    border-radius: 8px;
+    height: 40px;
+    width: 75px;
+}
+
+.Box-number p{
+    color: #CA0000;
+}
+
+
+.dropdown-menu{
+    margin-top: 5px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #c2bdbd;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.dropdown-menu i{
+    color: #000000;
+    font-size: 20px;
+    align-items: center;
+    margin-right: 3px;
+}
+
+.dropdown-menu p{
+    margin-right: 10px;
+    margin-top: 5px;
+    font-weight: 900;
+}
+
+.Box-text{
+    height: 30px;
+    width: 200px;
+    padding-left:5px;
+    margin-left:235px;
+    display: flex;
+    justify-content: space-between; 
+    text-align: center;
+}
+
+.Box-text P{
+    font-size: 15px;
+    font-weight: 500;
+    color: #FF9494;
+}
+
+
+
+.checkbox-line{
+    display: flex;
+    font-size: 15px;
+    font-weight: 900;
+    justify-content: space-between;
+
+}
+
+input[type="checkbox"] {
+    appearance: none; 
+    width: 20px;
+    height: 20px;
+    background:#d6b8b8 ;
+    border: 2px solid #d6b8b8; 
+    border-radius: 50%; 
+    display: inline-block;
+    position: relative;
+    margin-right: 0px;
+    padding-right: 15px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #e46262; 
+}
+
+input[type="checkbox"]:checked::before {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+}
+
+.diagram-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
 }
