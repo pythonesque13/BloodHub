@@ -6,13 +6,6 @@ import pandas as pd
 
 app = dash.Dash(__name__, external_stylesheets=[], use_pages=True)
 
-data_pie = pd.DataFrame({
-    "Condition de santé": ["Condition 1", "Condition 2", "Condition 3"],
-    "Dons": [40, 32, 28]
-})
-
-fig_pie = px.pie(data_pie, names="Condition de santé", values="Dons", hole=0.6)
-
 app.layout = html.Div([
     dcc.Location(id="url"),
     html.Div([
@@ -69,6 +62,7 @@ app.index_string = '''
 </body>
 </html>
 '''
+
 
 if __name__ == "__main__":
     app.run_server(debug=True)
