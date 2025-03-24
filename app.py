@@ -1,5 +1,5 @@
 import dash
-from dash import html, dcc
+from dash import html, dcc, Output, Input
 import plotly.express as px
 import pandas as pd
 
@@ -29,19 +29,21 @@ app.layout = html.Div([
                             html.I(className='bi bi-house-heart'),
                             'Home'
                         ]),
-                        className='active'
+                        id='home-item'
                     ),
                     html.Li(
                         html.A(href='/profil', children=[
                             html.I(className='bi bi-person-bounding-box'),
                             'Profil'
                         ]),
+                        id='profil-item'
                     ),
                     html.Li(
                         html.A(href='/', children=[
                             html.I(className='bi bi-bar-chart-line-fill'),
                             'IA'
                         ]),
+                        id='ia-item'
                     )   
                 ])
             ], className='nav'),
@@ -49,6 +51,23 @@ app.layout = html.Div([
         dash.page_container
     ], className='wrapper'),
 ], )
+
+@app.callback(
+    [
+        Output('home-item', 'className'),
+        Output('profil-item', 'className'),
+        Output('ia-item', 'className'),
+    ],
+    Input('url', 'pathname')
+)
+def update_active_links(pathname):
+    if pathname == '/':
+        return 'active', '', ''
+    elif pathname == '/profil':
+        return '', 'active', ''
+    elif pathname == '/ia':
+        return '', '', 'active'
+    return '', '', ''
 
 
 app.index_string = '''

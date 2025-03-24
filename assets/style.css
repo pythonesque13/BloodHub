@@ -51,18 +51,22 @@
     border-radius: 8px;
 }
 
-.nav li.active {
+.nav li.active,
+.nav li:hover {
     background-color: #dd707251;
 }
 
 nav li a {
     color: gray;
+    text-decoration: none;
 }
 
 nav li a i {
     margin-right: 15px;
 }
 
-.nav li.active a {
+.nav li.active a,
+.nav li:hover a {
     color: #CF5A5C;
 }
+
