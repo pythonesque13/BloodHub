@@ -9,6 +9,7 @@ import plotly.graph_objects as go
 from geopy.geocoders import Nominatim
 import datetime
 from collections import Counter
+import dash_bootstrap_components as dbc
 
 dash.register_page(__name__, path='/')
 
@@ -209,15 +210,14 @@ layout = html.Div([
         
         html.Div([
             html.Div([
-                dcc.Dropdown(
+                dbc.Select(
                     id="arrondissement-dropdown",
                     options=[{"label": arr, "value": arr} for arr in arrondissements],
                     value="Tous",
                     placeholder="Arrondissement",
-                    clearable=False,
                     
                 ),
-                dcc.Dropdown(
+                dbc.Select(
                     id="quartier-dropdown",
                     options=[{"label": q, "value": q} for q in quartiers],
                     placeholder="Quartier",
