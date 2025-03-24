@@ -39,7 +39,7 @@ app.layout = html.Div([
                         id='profil-item'
                     ),
                     html.Li(
-                        html.A(href='/', children=[
+                        html.A(href='/ai', children=[
                             html.I(className='bi bi-bar-chart-line-fill'),
                             'IA'
                         ]),
@@ -65,7 +65,7 @@ def update_active_links(pathname):
         return 'active', '', ''
     elif pathname == '/profil':
         return '', 'active', ''
-    elif pathname == '/ia':
+    elif pathname == '/ai':
         return '', '', 'active'
     return '', '', ''
 

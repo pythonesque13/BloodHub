@@ -1,6 +1,7 @@
 import dash
 from dash import html, dcc, Input, Output, callback
 import pandas as pd
+import dash_bootstrap_components as dbc
 import plotly.express as px
 
 FILE_PATH = 'data/dataset.xlsx'
@@ -90,21 +91,19 @@ layout = html.Div(children=[
             html.Div([
                 html.Div([
                     html.Label('Age',  className='fs-10'),
-                    dcc.Dropdown(
+                    dbc.Select(
                         id='age-dropdown',
                         options=[{'label': age, 'value': age} for age in labels],
                         value='18-25',
-                        clearable=False,
                     )
                 ], className='col-12 col-lg-5'),
 
                 html.Div([
                     html.Label('Group sanguin', className='fs-10'),
-                    dcc.Dropdown(
+                    dbc.Select(
                         id='blood-group-dropdown',
                         options=[{'label': bg, 'value': bg} for bg in donneurs['Groupe Sanguin ABO / Rhesus '].unique()],
                         value=donneurs['Groupe Sanguin ABO / Rhesus '].unique()[0],
-                        clearable=False
                     )
                 ], className='col-12 col-lg-5')
             ], className='row gap-4'),
