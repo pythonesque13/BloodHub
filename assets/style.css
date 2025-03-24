@@ -3,7 +3,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 .wrapper {
     display: flex;
     height: 100vh;
@@ -54,31 +53,43 @@ nav li a i {
     color: #CF5A5C;
 }
 
+
+.content-container{
+    height: 100vh;
+    width: 70vw;
+}
+
 .map-block {
-    width: 670px;
-    height: 770px;
+    width:100%;
+    height: 90vh;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 0.5rem;
-   
     padding: 0;
-    position: relative;  
+    position: relative;
+}
+
+.drop-div > div {
+    width: 210px;  
+}
+
+.Select-control {
+    border-radius: 8px !important;
 }
 
 #map-container {
     border-radius: 1.5rem;
     width: 100%;
-    height: 100%;
- 
+    height: calc(100% - 10px);
 }
 
 .diagram-block{
     width: 660px;
-    height: 366px;
+    height: 290px;
     box-shadow: 0 12px 10px rgba(0,0,0,0.1);
     padding: 1.5rem 4rem;
     border-radius: 0.5rem;
     margin-right: 1.5rem;
-    gap: 0.5rem;  
+    gap: 0.5rem;
 }
 
 .blo{
@@ -97,7 +108,6 @@ nav li a i {
     margin-left: 35px;
 }
 
-
 .diagram-block2{
     width: 660px;
     height: 366px;
@@ -106,7 +116,7 @@ nav li a i {
     border-radius: 0.5rem;
     padding: 1rem 1rem;
     margin-right: 1.5rem;
-    gap: 0.5rem;  
+    gap: 0.5rem;
 }
 
 .diagram-P{
@@ -150,7 +160,6 @@ nav li a i {
     color: #CA0000;
 }
 
-
 .dropdown-menu{
     margin-top: 5px;
     height: 30px;
@@ -181,7 +190,7 @@ nav li a i {
     padding-left:5px;
     margin-left:235px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     text-align: center;
 }
 
@@ -191,23 +200,20 @@ nav li a i {
     color: #FF9494;
 }
 
-
-
 .checkbox-line{
     display: flex;
     font-size: 15px;
     font-weight: 900;
     justify-content: space-between;
-
 }
 
 input[type="checkbox"] {
-    appearance: none; 
+    appearance: none;
     width: 20px;
     height: 20px;
     background:#d6b8b8 ;
-    border: 2px solid #d6b8b8; 
-    border-radius: 50%; 
+    border: 2px solid #d6b8b8;
+    border-radius: 50%;
     display: inline-block;
     position: relative;
     margin-right: 0px;
@@ -215,7 +221,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-    background-color: #e46262; 
+    background-color: #e46262;
 }
 
 input[type="checkbox"]:checked::before {
